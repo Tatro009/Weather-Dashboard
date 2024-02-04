@@ -1,3 +1,4 @@
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -21,18 +22,21 @@ header {
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+}
+
+.left-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
 }
 
 .search-section {
-    width: 70%;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
 #city-input {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -44,7 +48,6 @@ header {
 }
 
 button {
-    width: 100%;
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -57,44 +60,55 @@ button:hover {
 }
 
 #search-history {
-    margin-top: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #search-history button {
-    display: block;
-    width: 100%;
     padding: 8px;
     margin-bottom: 5px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    text-align: left;
+    background-color: #ddd;
+    border: 1px solid #999;
     cursor: pointer;
+    width: 100px; /* Adjust the width according to your needs */
 }
 
 #search-history button:hover {
-    background-color: #e0e0e0;
+    background-color: #bbb;
+}
+
+.right-section {
+    width: 70%;
+    padding-left: 20px;
 }
 
 #weather-display {
-    width: 65%;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 #forecast {
-    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .forecast-card {
-    width: 18%;
+    width: calc(20% - 10px);
+    margin-right: 10px;
+    margin-bottom: 20px;
     background-color: #333;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card:last-child {
+    margin-right: 0;
 }
 
 .forecast-card h3 {
@@ -103,4 +117,8 @@ button:hover {
 
 .forecast-card p {
     margin-bottom: 5px;
+}
+
+#search-history {
+    margin-bottom: 10px;
 }
