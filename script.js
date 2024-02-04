@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // Define variables for DOM elements
 const cityInput = document.getElementById('city-input');
 const citySearchForm = document.getElementById('city-search-form');
