@@ -18,10 +18,13 @@ The Weather Dashboard is a web application that allows users to check the curren
 ## Usage
 
 1. Clone the repository to your local machine.
-2. Open the `index.html` file in a web browser.
-3. Enter the name of the city you want to check the weather for in the search form.
-4. Press the "Search" button or hit Enter to view the current weather and 5-day forecast.
-5. Previously searched cities will be displayed below the search form as buttons. Click on any button to view weather information for that city again.
+2. Open a terminal or command prompt and navigate to the project directory.
+3. Install the `http-server` package globally by running `npm install -g http-server`.
+4. Start the local server by running `http-server`.
+5. Open your web browser and navigate to the URL provided by the `http-server`
+6. Enter the name of the city you want to check the weather for in the search form.
+7. Press the "Search" button or hit Enter to view the current weather and 5-day forecast.
+8. Previously searched cities will be displayed below the search form as buttons. Click on any button to view weather information for that city again.
 
 ## Credits
 
@@ -30,3 +33,4 @@ Application coded by Rob Tatro, using the OpenWeatherMap API for weather data.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+

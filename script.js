@@ -1,3 +1,4 @@
+// Import dotenv and configure it to load environment variables
 require('dotenv').config();
 
 // Define variables for DOM elements
@@ -8,18 +9,18 @@ const weatherDisplay = document.getElementById('weather-display');
 const forecastDisplay = document.getElementById('forecast');
 
 // Event listener for search form submission
-citySearchForm.addEventListener('submit', function(event) {
+citySearchForm.addEventListener('submit', async function(event) {
     event.preventDefault();
     const cityName = cityInput.value.trim();
     if (cityName !== '') {
-        getWeatherData(cityName);
+        await getWeatherData(cityName); // Await the asynchronous function
         cityInput.value = ''; // Clear input field after searching for city
     }
 });
 
 // Function to fetch weather data from OpenWeatherMap API
 async function getWeatherData(cityName) {
-    const apiKey = process.env.API_KEY;
+    const apiKey = process.env.API_KEY; // Access API key from environment variables
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
 
     try {
